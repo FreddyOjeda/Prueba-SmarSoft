@@ -1,0 +1,51 @@
+<div class="container-fluid" id="div2" style="background-color: cornflowerblue; position: absolute; height:100%;
+width: 100%;">
+    <div class="card-body" style="position: absolute; height: 100%; width: 100%; left: 0%;">
+        <nav class="navbar navbar-dark bg-dark" style="position: absolute; height: 10%; width: 100%; left: 0%; top: 0%;">
+            <!-- Navbar content -->
+            <h5 class="card-title" style="color: aliceblue;">&nbsp;&nbsp;&nbsp;{{titulo}}</h5>
+
+            <br>
+            <br>
+          </nav>
+        
+        <form style="position: absolute; width: 44%; left: 35%; top: 20%; align-content: center;">
+            <br>
+            <br>
+            <div class="form-group row" >
+                <br>
+                
+                <label for="nombre" class="col-form-label col-sm-2">Nombre</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="nombre" [(ngModel)]="producto.nombre"
+                        placeholder="Ingresa el nombre del producto" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label for="precio" class="col-form-label col-sm-2">Precio</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="precio" [(ngModel)]="producto.precio"
+                        placeholder="Ingresa el precio" required>
+                </div>
+            </div>
+
+            <br>
+            <div class="form-group row">
+                <label for="stock" class="col-form-label col-sm-2">Stock</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="stock" [(ngModel)]="producto.stock"
+                        placeholder="Ingresa el numero de Stock" required>
+                </div>
+            </div>
+
+            <br>
+            <button class="btn btn-success" role="button" (click)='create()' value="SUBMIT"> CREAR PRODUCTO</button>
+            
+            <button class="btn btn-info" role="button" style="margin-left: 8%;" (click)='update()'> ACTUALIZAR PRODUCTO</button>
+
+
+        </form>
+    </div>
+
+</div>

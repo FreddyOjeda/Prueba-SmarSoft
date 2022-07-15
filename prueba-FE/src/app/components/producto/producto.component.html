@@ -1,0 +1,59 @@
+<div class="container-fluid" id="div2" style="background-color: cornflowerblue; position: absolute; height:100%;
+width: 100%;">
+<div class="row" style="max-height: 100%;">
+  <div class="col navbar flex-column navbar-dark bg-dark" style=" position: absolute; max-width: 25%; height: 100%; ">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-light text-decoration-none">
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+      <span class="fs-4 " style="text-align: center;" >Prueba Desarrollo SmartSoft</span>
+    </a>
+
+    <div style=" position: absolute; top: 20%; width: 90%; align-content: center;">
+      <ul class="nav flex-column" >
+        <li class="nav-item btn btn-dark"><a href="/clientes" class="nav-link">Clientes</a></li>
+        <li class="nav-item btn btn-dark"><a href="/detalle" class="nav-link">Detalle</a></li>
+        <li class="nav-item btn btn-dark"><a href="/factura" class="nav-link">Facturas</a></li>
+        <li class="nav-item btn btn-dark"><a href="/producto" class="nav-link">Productos</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="col" style="position: absolute; left: 25%; max-width: 75%; ">
+    <p></p>
+    <p></p>
+    <div class="table-responsive">
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id Producto</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of producto">
+            <th scope="row">{{producto.id_producto}}</th>
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.precio}}</td>
+            <td>{{producto.stock}}</td>
+            <td><button type="button" name="button" class="btn btn-primary"
+                [routerLink]="['/producto/form/', producto.id_producto]">EDITAR</button></td>
+            <td><button class="btn btn-danger" (click)="delete(producto)">ELIMINAR</button></td>
+          </tr>
+    
+        </tbody>
+      </table>
+    </div>
+    
+  <p></p>
+  <br>
+  <div class="container-fluid">
+    <button class="btn btn-info" type="button" [routerLink]="['/producto/form']"> Nuevo Producto</button>
+  </div>
+  <p></p>
+  </div>
+</div>
+<!--sdiewgbuiaui-->

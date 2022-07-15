@@ -1,0 +1,49 @@
+<div class="container-fluid" id="div2" style="background-color: cornflowerblue; position: absolute; height:100%;
+width: 100%;">
+    <div class="card-body">
+        <nav class="navbar navbar-dark bg-dark" style="position: absolute; height: 10%; width: 100%; left: 0%; top: 0%;">
+            <!-- Navbar content -->
+            <h5 class="card-title" style="color: aliceblue;">&nbsp;&nbsp;&nbsp;{{titulo}}</h5>
+
+            <br>
+            <br>
+          </nav>
+        <form style="position: absolute; width: 50%; left: 33%; top: 20%; align-content: center;">
+            <br>
+            <br>
+            <div class="form-group row">
+                <label for="nombre" class="col-form-label col-sm-2">Cantidad</label>
+                <div class="col-sm-6">
+                    <input type="number" class="form-control" name="nombre" [(ngModel)]="detalle.cantidad"
+                        placeholder="Ingresa la cantidad del producto" required>
+                </div>
+            </div>
+
+            <br>
+            <div class="form-group row">
+                <label for="stock" class="col-form-label col-sm-2">Num Factura</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="stock" [(ngModel)]="detalle.id_factura"
+                        placeholder="Ingresa el numero de Stock" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label for="stock" class="col-form-label col-sm-2">Id Producto</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="stock" [(ngModel)]="detalle.id_producto"
+                        placeholder="Ingresa el numero de Stock" required>
+                </div>
+            </div>
+
+            <br>
+            <button class="btn btn-success" role="button" (click)='create()' value="SUBMIT"> CREAR DETALLE</button>
+
+
+            <button class="btn btn-info" style="margin-left: 14%;" role="button" (click)='update()'> ACTUALIZAR DETALLE</button>
+
+
+        </form>
+    </div>
+
+</div>

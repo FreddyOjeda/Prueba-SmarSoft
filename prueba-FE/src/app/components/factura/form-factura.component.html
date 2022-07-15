@@ -1,0 +1,34 @@
+<div class="container-fluid" id="div2" style="background-color: cornflowerblue; position: absolute; height:100%;
+width: 100%;">
+    <div class="card-body">
+        <nav class="navbar navbar-dark bg-dark" style="position: absolute; height: 10%; width: 100%; left: 0%; top: 0%;">
+            <!-- Navbar content -->
+            <h5 class="card-title" style="color: aliceblue;">&nbsp;&nbsp;&nbsp;{{titulo}}</h5>
+
+            <br>
+            <br>
+          </nav>
+        <form style="position: absolute; width: 44%; left: 35%; top: 20%; align-content: center;">
+            <br>
+            <br>
+            <div class="form-group row">
+                <label for="id_cliente" class="col-form-label col-sm-2">Id Cliente</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="id_cliente" [(ngModel)]="facturas.id_cliente"
+                        placeholder="Ingresa el id del cliente" required>
+
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <button class="btn btn-success" role="button" (click)='create()'> CREAR FACTURA</button>
+
+
+            <button class="btn btn-info" style="margin-left: 10%;" role="button" (click)='update()'> ACTUALIZAR FACTURA</button>
+
+
+        </form>
+    </div>
+
+</div>

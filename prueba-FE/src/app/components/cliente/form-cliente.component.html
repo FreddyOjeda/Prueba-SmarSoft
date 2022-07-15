@@ -1,0 +1,71 @@
+<div class="container-fluid" id="div2" style="background-color: cornflowerblue; position: absolute; height:100%; max-height: 100%;
+width: 100%;">
+    <div class="card-body">
+        <nav class="navbar navbar-dark bg-dark" style="position: absolute; height: 10%; width: 100%; left: 0%; top: 0%;">
+            <!-- Navbar content -->
+            <h5 class="card-title" style="color: aliceblue;">&nbsp;&nbsp;&nbsp;{{titulo}}</h5>
+
+            <br>
+            <br>
+          </nav>
+        <form style="position: absolute; width: 44%; left: 35%; top: 10%; align-content: center;">
+            <br>
+            <br>
+            <div class="form-group row">
+                <label for="nombres" class="col-form-label col-sm-2">Nombres</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="nombres" [(ngModel)]="clientes.nombre"
+                        placeholder="Ingresa el nombre del cliente" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label for="apellidos" class="col-form-label col-sm-2">Apellidos</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="apellidos" [(ngModel)]="clientes.apellido"
+                        placeholder="Ingresa el apellido del cliente" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label for="telefono" class="col-form-label col-sm-2">Telefono</label>
+                <div class="col-sm-6">
+                    <input type="number" class="form-control" name="telefono" [(ngModel)]="clientes.telefono"
+                        placeholder="Ingresa el telefono del cliente" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label for="fecha_nacimiento" class="col-form-label col-sm-2">Fecha de Nacimiento</label>
+                <div class="col-sm-6">
+                    <input type="date" placeholder="dd-MM-yyyy" class="form-control" name="fecha_nacimiento"
+                        [(ngModel)]="clientes.fecha_nacimiento " placeholder="Ingresa la fecha de nacimiento" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label for="email" class="col-form-label col-sm-2">Email</label>
+                <div class="col-sm-6">
+                    <input type="email" class="form-control" name="email" [(ngModel)]="clientes.email"
+                        placeholder="Ingresa el correo del cliente" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <label for="direccion" class="col-form-label col-sm-2">Direccion</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" name="direccion" [(ngModel)]="clientes.direccion"
+                        placeholder="Ingresa su direccion" >
+                </div>
+            </div>
+            <br>
+            <button class="btn btn-success" role="button" (click)='create()'> CREAR CLIENTE</button>
+            
+
+            <button class="btn btn-info" style="margin-left: 8%;" role="button" (click)='update()'> ACTUALIZAR CLIENTE</button>
+
+
+        </form>
+    </div>
+
+</div>
